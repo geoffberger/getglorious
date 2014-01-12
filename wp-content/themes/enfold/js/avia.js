@@ -37,7 +37,7 @@
 		//activates the mega menu javascript
 		if($.fn.aviaMegamenu)
 		$(".main_menu .menu").aviaMegamenu({modify_position:true});
-		
+
 		$.avia_utilities.avia_ajax_call();
     });
 
@@ -46,14 +46,14 @@
 	$.avia_utilities.avia_ajax_call = function(container)
 	{
 		if(typeof container == 'undefined'){ container = 'body';};
-		
-		
+
+
 		$('a.avianolink').on('click', function(e){ e.preventDefault(); });
         	$('a.aviablank').attr('target', '_blank');
 
         //activates the prettyphoto lightbox
         $(container).avia_activate_lightbox({callback:'avia_lightbox_callback'});
-        
+
         //scrollspy for main menu. must be located before smoothscrolling
 		if($.fn.avia_scrollspy)
 		{
@@ -80,9 +80,9 @@
 		//activate html5 video player
 		if($.fn.avia_html5_activation && $.fn.mediaelementplayer)
 		$(".avia_video, .avia_audio", container).avia_html5_activation({ratio:'16:9'});
-		
-		
-		
+
+
+
 
 	}
 
@@ -92,11 +92,11 @@
 	// modified SCROLLSPY by bootstrap
 	// -------------------------------------------------------------------------------------------
 
-	
+
 	  function AviaScrollSpy(element, options)
 	  {
 	  	var self = this;
-	  
+
 		    var process = $.proxy(self.process, self)
 		      , refresh = $.proxy(self.refresh, self)
 		      , $element = $(element).is('body') ? $(window) : $(element)
@@ -106,51 +106,51 @@
 		    self.selector = (self.options.target
 		      || ((href = $(element).attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '')) //strip for ie7
 		      || '')
-		    
+
 		   	self.activation_true = false;
-		   	
+
 		    if(self.$body.find(self.selector + "[href*=#]").length)
 		    {
 		    	self.$scrollElement = $element.on('scroll.scroll-spy.data-api', process);
 		    	self.$body.on('av_resize_finished', refresh);
 		    	self.activation_true = true;
 		    	self.checkFirst();
-		    	
+
 		    	setTimeout(function()
 	  			{
 		    		self.refresh()
 		    		self.process()
-		    		
+
 		    	},100);
 		    }
-	    
+
 	  }
-	
+
 	  AviaScrollSpy.prototype = {
-	
+
 	      constructor: AviaScrollSpy
 		, checkFirst: function () {
-		
+
 			var current = window.location.href.split('#')[0],
 				matching_link = this.$body.find(this.selector + "[href='"+current+"']").attr('href',current+'#top');
 		}
 	    , refresh: function () {
-	    
+
 	    if(!this.activation_true) return;
-	    
+
 	        var self = this
 	          , $targets
-	
+
 	        this.offsets = $([])
 	        this.targets = $([])
-	
+
 	        $targets = this.$body
 	          .find(this.selector)
 	          .map(function () {
 	            var $el = $(this)
 	              , href = $el.data('target') || $el.attr('href')
 	              , $href = /^#\w/.test(this.hash) && $(this.hash)
-	             
+
 	            return ( $href
 	              && $href.length
 	              && [[ $href.position().top + (!$.isWindow(self.$scrollElement.get(0)) && self.$scrollElement.scrollTop()), href ]] ) || null
@@ -160,13 +160,13 @@
 	            self.offsets.push(this[0])
 	            self.targets.push(this[1])
 	          })
-	          
+
 	      }
-	
+
 	    , process: function () {
-	    	
+
 	    	if(!this.offsets) return;
-	    	
+
 	        var scrollTop = this.$scrollElement.scrollTop() + this.options.offset
 	          , scrollHeight = this.$scrollElement[0].scrollHeight || this.$body[0].scrollHeight
 	          , maxScroll = scrollHeight - this.$scrollElement.height()
@@ -179,7 +179,7 @@
 	          return activeTarget != (i = targets.last()[0])
 	            && this.activate ( i )
 	        }
-	
+
 	        for (i = offsets.length; i--;) {
 	          activeTarget != targets[i]
 	            && scrollTop >= offsets[i]
@@ -187,38 +187,38 @@
 	            && this.activate( targets[i] )
 	        }
 	      }
-	
+
 	    , activate: function (target) {
 	        var active
 	          , selector
-	
+
 	        this.activeTarget = target
-	
+
 	        $(this.selector)
 	          .parent('.' + this.options.applyClass)
 	          .removeClass(this.options.applyClass)
-	
+
 	        selector = this.selector
 	          + '[data-target="' + target + '"],'
 	          + this.selector + '[href="' + target + '"]'
-	
+
 	        active = $(selector)
 	          .parent('li')
 	          .addClass(this.options.applyClass)
-	
+
 	        if (active.parent('.dropdown-menu').length)  {
 	          active = active.closest('li.dropdown').addClass(this.options.applyClass)
 	        }
-	
+
 	        active.trigger('activate')
 	      }
-	
+
 	  }
-	
-	
+
+
 	 /* AviaScrollSpy PLUGIN DEFINITION
 	  * =========================== */
-	
+
 	  $.fn.avia_scrollspy = function (option) {
 	    return this.each(function () {
 	      var $this = $(this)
@@ -228,9 +228,9 @@
 	      if (typeof option == 'string') data[option]()
 	    })
 	  }
-	
+
 	  $.fn.avia_scrollspy.Constructor = AviaScrollSpy
-	
+
 	  $.fn.avia_scrollspy.defaults = {
 	    offset: (parseInt($('.fixed_header #header').height(), 10)) + parseInt($('html').css('margin-top'),10),
 	    applyClass: 'current-menu-item'
@@ -278,7 +278,7 @@
         }
 
         if(outputClassElement) $(outputClassElement).addClass(bodyclass)
-        
+
         return bodyclass;
     }
 
@@ -310,7 +310,8 @@
 	    	menu.mobileMenu({
 			  switchWidth: switchWidth,                   					//width (in px to switch at)
 			  topOptionText: jQuery('.main_menu').data('selectname'),     	//first option text
-			  indentString: 'ontouchstart' in document.documentElement ? '- ' : "&nbsp;&nbsp;&nbsp;"//string for indenting nested items
+			  indentString: 'ontouchstart' in document.documentElement ? '- ' : "&nbsp;&nbsp;&nbsp;", //string for indenting nested items
+        noTopOptionText: true
 			});
     	}
     	else
@@ -322,7 +323,7 @@
 	    		menu_added 		= false;
 
 	    		mobile_advanced.find('.noMobile').remove();
-	    		
+
 	    	jQuery(document).on('click', '#mobile-advanced li a[href*=#]', function()
 			{
 				container.removeClass('show_mobile_menu');
@@ -595,7 +596,7 @@
 		var fv 			= $(this),
 	      	id_to_apply = '#' + fv.attr('id'),
 	      	posterImg 	= fv.attr('poster');
-		
+
 
 		fv.mediaelementplayer({
 		    // if the <video width> is not specified, this is the default
@@ -637,31 +638,31 @@
 		    // when this player starts, it will pause other players
 		    pauseOtherPlayers: true,
 		    poster: posterImg,
-		    success: function (mediaElement, domObject) { 
-         	
-				if (mediaElement.pluginType == 'flash') 
-				{	
+		    success: function (mediaElement, domObject) {
+
+				if (mediaElement.pluginType == 'flash')
+				{
 					mediaElement.addEventListener('canplay', function() { fv.trigger('av-video-loaded'); }, false);
 				}
 				else
 				{
 			        fv.trigger('av-video-loaded');
 				}
-			         
-			     mediaElement.addEventListener('ended', function() { fv.trigger('av-video-ended'); }, false);  
-		         
+
+			     mediaElement.addEventListener('ended', function() { fv.trigger('av-video-ended'); }, false);
+
 		    },
 		    // fires when a problem is detected
-		    error: function () { 
-		     
+		    error: function () {
+
 		    },
-		    
+
 		    // array of keyboard commands
 		    keyActions: []
 
 				});
 			});
-	
+
 		}
 
 
@@ -1363,7 +1364,7 @@
         this.scope   = $(this.options.scope);
         this.timer   = false;
         this.lastVal = "";
-		
+
         this.bind_events();
 	}
 
@@ -1591,7 +1592,8 @@
     var settings = {
       switchWidth: 768,
       topOptionText: 'Select a page',
-      indentString: '&nbsp;&nbsp;&nbsp;'
+      indentString: '&nbsp;&nbsp;&nbsp;',
+      noTopOptionText: false
     };
 
 
@@ -1604,7 +1606,7 @@
     //function to decide if mobile or not
     function isMobile(){
       var header = $('.responsive #header');
-      
+
       if($(window).width() < settings.switchWidth)
       {
          header.addClass('mobile_active');
@@ -1663,7 +1665,9 @@
         var selectString = '<select id="mobileMenu_'+$this.attr('id')+'" class="mobileMenu">';
 
         //create first option (no value)
-        selectString += '<option value="">'+settings.topOptionText+'</option>';
+        if (!settings.noTopOptionText) {
+          selectString += '<option value="">'+settings.topOptionText+'</option>';
+        }
 
         //loop through list items
         var active_found = false;
