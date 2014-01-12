@@ -1,0 +1,24 @@
+*** See You Later by WooThemes ***
+
+2013.11.01 - version 1.1
+ * New - Progress Bar
+ * New - Wysija/Mailpoet Integration
+ * New - Animated sliding backgrounds
+ * New - Responsive layout
+ * New - Ability to use your theme's 503 file
+ * New - Preview option
+ * Tweak - Remove dropshadow in Vanilla theme
+ * Fix - Prevent selecting past dates for countdown clock
+ * Tweak - Reprioritized theme heading tags
+ * Tweak - Open social links in new pages
+ * Fix - Double quotes converted to HTML entities
+ * Fix - Textdomain path
+
+2013.07.22 - version 1.0.1
+ * Fix extra closing PHP tags issue
+ * Fix campaign monitor email id problem
+ * Added support for LinkedIn company pages
+ * Added option to hide footer credit
+
+2013.07.17 - version 1.0.0
+ * First release!

@@ -1,0 +1,164 @@
+/* Have fun adding your style here :) - PS: At all times this file should contain a comment or a rule, otherwise opera might act buggy :( */
+
+/* General Custom CSS */
+
+/*
+Theme Name: Enfold Child
+Description: A <a href='http://codex.wordpress.org/Child_Themes'>Child Theme</a> for the Enfold Wordpress Theme. If you plan to do a lot of file modifications we recommend to use this Theme instead of the original Theme. Updating wil be much easier then.
+Version: 1.0
+Author: Kriesi
+Author URI: http://www.kriesi.at
+Template: enfold
+*/
+
+.logo img{
+padding:0 !important;
+}
+
+h1, h2{
+font-family: "kulturista-web",serif;
+font-style: normal;
+font-weight: 300;
+}
+
+h3, h4, h5, h6{
+font-family: "kulturista-web",serif;
+font-style: normal;
+font-weight: 400;
+}
+
+p {
+font: 16px/1.6em "brandon-grotesque-n3","brandon-grotesque",sans-serif;
+font-style: normal;
+font-weight: 300;
+}
+
+.avia-caption .avia-caption-content p{
+	background: rgba(0,0,0,.0) !important;
+}
+
+.template-page .entry-content-wrapper h1, .template-page .entry-content-wrapper h2 {
+text-transform: none;
+}
+
+
+#top label {
+font-weight: 300;
+font-size: 14px;
+}
+
+#top .avia_ajax_form .text_input{
+	border-radius: 0px;
+}
+
+div .slideshow_caption h2{
+color: #202631 !important;
+font-family: "brandon-grotesque-n3","brandon-grotesque",sans-serif !important;
+}
+
+#top .alternate_color textarea, #top .alternate_color input[type='text']{
+color: white;
+font-style: normal;
+font-weight: 300;
+border-color: transparent;
+background-color: rgba(255,255,255,0.33);
+}
+
+ #top .avia_ajax_form .text_area {
+border-radius: 0px;
+background-color: rgba(255,255,255,0.33);
+color: white;
+}
+
+.header_color .main_menu ul:first-child > li > a{
+	color: rgba(255,255,255,0.8);
+}
+
+
+.avia-menu-fx .avia-arrow-wrap {
+height: 24px;
+width: 10px;
+position: absolute;
+top: -15px;
+left: 50%;
+margin-left: -3px;
+overflow: hidden;
+display: none;
+}
+
+#header{
+	background-color: #c9412f;
+}
+
+.alternate_color .button, .alternate_color #submit, .alternate_color input[type="submit"]{
+background-color: #232B37;
+font-family: "brandon-grotesque-n3","brandon-grotesque",sans-serif;
+font-style: normal;
+font-weight: 300;
+text-transform: uppercase;
+letter-spacing: 1px;
+}
+
+
+.alternate_color .button:hover, .alternate_color input[type="submit"]:hover{
+background-color: black;	
+}
+
+.avia_ajax_form label, .modified_width:before {
+color: white !important;
+font-size: 15px;
+}
+
+
+hr.home {
+  color: #636A75;
+}
+
+.main_color strong{
+	color: #646a75 !important;
+}
+
+
+.main_color{
+border-color: transparent !important;
+}
+
+.alternate_color div{
+border-color: white !important;	
+}
+
+.avia_ajax_form .button {
+margin-left: 25% !important;
+}
+
+.iconbox_top .iconbox_content {
+border-radius: 0px !important;
+box-shadow: 0px 0px 1px 0px rgba(0,0,0,.3);
+}
+
+*/
+
+/*Add your own styles here:*/
+
+/*
+Desktop Styles
+================================================== */
+/* Note: Add new css to the media query below that you want to only effect the desktop view of your site */
+
+@media only screen and (min-width: 768px) {
+  /* Add your Desktop Styles here */
+
+
+}
+
+
+
+/*
+Mobile Styles
+================================================== */
+/* Note: Add new css to the media query below that you want to only effect the Mobile and Tablet Portrait view */
+
+@media only screen and (max-width: 767px) {
+  /* Add your Mobile Styles here */
+
+}
