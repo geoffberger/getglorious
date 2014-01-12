@@ -2752,7 +2752,7 @@ animation:         avia_pop_small 0.5s 1 cubic-bezier(0.175, 0.885, 0.320, 1.275
 
 		.responsive #top .mobileMenu{position: absolute; top: 50%; margin: -15px 0 0 0; width:250px; right:0; max-width: 250px;}
 		.responsive .main_menu ul:first-child > li > a { padding: 0 10px; }
-		.responsive #top #header {position: relative; }
+		.responsive #top #header {position: fixed; }
 		.responsive #top .header_bg { opacity: 1; filter: alpha(opacity=1); }
 		.responsive #top #main   {padding-top:0; }
 		.responsive #main .container_wrap:first-child{ border-top:none; }
