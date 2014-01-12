@@ -190,6 +190,15 @@ padding-right:0;
 
 .nonfixed_header .container_wrap:first-child, .avia-section.avia-full-stretch{border-top:none;}
 
+/* this assumes that el-26 will be the last element and that only two sections will be contained within */
+.avia-builder-el-26 .av_textblock_section:first-child {
+	margin-bottom: 50px;
+}
+
+.avia-builder-el-26 .av_textblock_section:last-child {
+	margin-top: 50px;
+}
+
 
 /* ======================================================================================================================================================
 ICON
