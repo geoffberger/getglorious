@@ -20,6 +20,8 @@
         //show scroll top button
         avia_scroll_top_fade();
 
+        avia_scroll_top();
+
         //creates search tooltip
         new $.AviaTooltip({"class": 'avia-search-tooltip',data: 'avia-search-tooltip', event:'click', position:'bottom', scope: "body", attach:'element'});
 
@@ -1347,6 +1349,23 @@
    		 win.scroll(set_status);
          set_status();
 	}
+
+  function avia_scroll_top() {
+    $(document.getElementById('header_main')).on('click', '.logo a', function(e) {
+      e.preventDefault();
+      //location.hash = '';
+      var properties = { scrollTop: 0 },
+          options = {
+            complete: function() {
+              if (history.pushState) {
+                history.pushState("", document.title, location.pathname + location.search);
+              }
+            }
+          };
+
+      $('html, body').animate(properties, options);
+    });
+  }
 
 
 
