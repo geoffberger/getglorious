@@ -2795,6 +2795,7 @@ animation:         avia_pop_small 0.5s 1 cubic-bezier(0.175, 0.885, 0.320, 1.275
 		.responsive .mobile_slide_out .logo{float:left;}
 		.responsive .logo img{margin: 0 auto; max-width: 100%;}
 		.responsive #header_main .container{height:auto !important; }
+		.responsive #header_main .container .logo img {max-height: 100% !important; } /* yes, its dirty but its an easy way out to make sure JS doesn't override the logo */
 		.responsive #top .header_bg { opacity: 1; filter: alpha(opacity=1); }
 		.responsive #top .mobileMenu{margin: 0 0 10px 0; width:100%; padding: 10px 4px;}
 		.responsive.social_header .phone-info {text-align: center; float:none; clear:both; margin:0; padding:0;}
@@ -2826,7 +2827,7 @@ animation:         avia_pop_small 0.5s 1 cubic-bezier(0.175, 0.885, 0.320, 1.275
 		.responsive #top .grid-sort-container.grid-total-odd .grid-entry.grid-loop-1{width:100%;}
 		.responsive #top .grid-sort-container .grid-entry{ width:50%; margin-bottom: 0;}
 		.responsive #top .portfolio-parity-odd{ clear:both; }
-		
+
 		.responsive #scroll-top-link{display: none;} /*iphones etc scroll better by tapping the status bar at the top of the screen*/
 
 	}
