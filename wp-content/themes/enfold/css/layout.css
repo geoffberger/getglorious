@@ -316,6 +316,8 @@ display:none;
 
 .avia-menu-fx .avia-arrow-wrap .avia-arrow{
 top: 10px;
+border-top: 0;
+border-left: 0;
 }
 
 
