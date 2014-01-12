@@ -200,6 +200,21 @@ padding-right:0;
 }
 
 
+/* target tablet related device to make sure its no too crazy */
+@media only screen and (max-width: 767px)  {
+	.avia-builder-el-24 .avia_textblock p {
+		font-size: 32px !important;
+	}
+}
+
+/* target mobile related device to make sure the thing fits */
+@media only screen and (max-width: 479px) {
+	.avia-builder-el-24 .avia_textblock p {
+		font-size: 22px !important;
+	}
+}
+
+
 /* ======================================================================================================================================================
 ICON
 ====================================================================================================================================================== */
