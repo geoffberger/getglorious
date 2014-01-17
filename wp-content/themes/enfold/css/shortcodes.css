@@ -192,11 +192,11 @@ padding-right:0;
 
 /* this assumes that el-26 will be the last element and that only two sections will be contained within */
 .avia-builder-el-26 .av_textblock_section:first-child {
-	margin-bottom: 50px;
+	padding-bottom: 30px;
 }
 
 .avia-builder-el-26 .av_textblock_section:last-child {
-	margin-top: 50px;
+	padding-top: 30px;
 }
 
 
