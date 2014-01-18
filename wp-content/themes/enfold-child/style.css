@@ -127,22 +127,8 @@ border-color: transparent !important;
 border-color: white !important;
 }
 
-.avia_ajax_form .button {
-margin-left: 25% !important;
-}
-
-@media only screen and (min-width : 768px) and (max-width : 1024px) {
-  .avia_ajax_form .button {
-    margin: 0 10% !important;
-    width: 80%;
-  }
-}
-
-@media only screen and (min-width : 480px) and (max-width : 768px) {
-  .avia_ajax_form .button {
-    margin: 0 15% !important;
-    width: 70%;
-  }
+.avia_ajax_form .form_actions {
+  text-align: center;
 }
 
 @media only screen and (min-width : 320px) and (max-width : 480px) {

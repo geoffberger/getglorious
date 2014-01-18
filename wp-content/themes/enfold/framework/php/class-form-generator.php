@@ -187,7 +187,7 @@ if( ! class_exists( 'avia_form' ) )
 			{
 				$p_class = !empty($this->lastwidth) ? "modified_width ".$this->lastwidth." ".str_replace('_2','',$this->lastwidth) : "";
 				$this->output .= $this->elements_html;
-				$this->output .= '<p class="'.$p_class.'">';
+				$this->output .= '<p class="form_actions '.$p_class.'">';
 				$this->output .= '<input type="hidden" value="1" name="avia_generated_form'.$this->formID.'" />';
 				$this->output .= '<input type="submit" value="'.$this->form_params['submit'].'" class="button" />';
 				$this->output .= '</p>';
@@ -629,7 +629,7 @@ if( ! class_exists( 'avia_form' ) )
 					$key = $iterations;
 				}
 
-				// substract 5 characters from the string length because we removed the avia_ prefix with 5 characters at the beginning of the send() function 
+				// substract 5 characters from the string length because we removed the avia_ prefix with 5 characters at the beginning of the send() function
 				$key = avia_backend_truncate($key, $this->length - 5, "_", "", false, '', false);
 
 				$key .= $this->id_sufix;
@@ -653,7 +653,7 @@ if( ! class_exists( 'avia_form' ) )
 			$header = 'Content-type: text/html; charset=utf-8' . "\r\n";
 			$header = apply_filters("avf_form_mail_header", $header, $new_post, $this->form_params);
 			$copy 	= apply_filters("avf_form_copy", array($to), $new_post, $this->form_params);
-			
+
 			$message = stripslashes($message);
 
 
