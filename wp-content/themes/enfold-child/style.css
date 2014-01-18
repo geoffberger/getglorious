@@ -101,7 +101,7 @@ letter-spacing: 1px;
 
 
 .alternate_color .button:hover, .alternate_color input[type="submit"]:hover{
-background-color: black;	
+background-color: black;
 }
 
 .avia_ajax_form label, .modified_width:before {
@@ -124,19 +124,38 @@ border-color: transparent !important;
 }
 
 .alternate_color div{
-border-color: white !important;	
+border-color: white !important;
 }
 
 .avia_ajax_form .button {
 margin-left: 25% !important;
 }
 
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+  .avia_ajax_form .button {
+    margin: 0 10% !important;
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width : 480px) and (max-width : 768px) {
+  .avia_ajax_form .button {
+    margin: 0 15% !important;
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+  .avia_ajax_form .button {
+    margin-left: 0 !important;
+    width: 100%;
+  }
+}
+
 .iconbox_top .iconbox_content {
 border-radius: 0px !important;
 box-shadow: 0px 0px 1px 0px rgba(0,0,0,.3);
 }
-
-*/
 
 /*Add your own styles here:*/
 
